@@ -1,9 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { Gavel, Search, User, Bell, Menu } from 'lucide-react';
+import { Search, User, Bell, Menu } from 'lucide-react';
 import HomePage from './pages/HomePage';
 import AuctionDetailPage from './pages/AuctionDetailPage';
 import Button from './components/ui/Button';
+import Logo from './components/ui/Logo';
 
 function App() {
   return (
@@ -14,11 +15,8 @@ function App() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
               {/* Logo */}
-              <Link to="/" className="flex items-center space-x-2">
-                <div className="flex items-center justify-center w-10 h-10 bg-primary-600 rounded-lg">
-                  <Gavel className="w-6 h-6 text-white" />
-                </div>
-                <span className="text-xl font-bold text-secondary-900">AuctionHub</span>
+              <Link to="/" className="flex items-center">
+                <Logo variant="default" size="md" />
               </Link>
 
               {/* Search Bar */}
@@ -82,12 +80,7 @@ function App() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="col-span-1 md:col-span-2">
-                <div className="flex items-center space-x-2 mb-4">
-                  <div className="flex items-center justify-center w-8 h-8 bg-primary-600 rounded-lg">
-                    <Gavel className="w-5 h-5 text-white" />
-                  </div>
-                  <span className="text-xl font-bold">AuctionHub</span>
-                </div>
+                <Logo variant="dark" size="lg" className="mb-4" />
                 <p className="text-secondary-300 mb-4 max-w-md">
                   The premier destination for collectors and enthusiasts. Discover unique items, 
                   place bids, and connect with a community of passionate buyers and sellers.

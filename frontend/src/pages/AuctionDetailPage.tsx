@@ -15,6 +15,7 @@ import { Auction, Comment, User as UserType } from '../types';
 import Button from '../components/ui/Button';
 import Input from '../components/ui/Input';
 import Card from '../components/ui/Card';
+import Breadcrumb from '../components/ui/Breadcrumb';
 
 const AuctionDetailPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -139,6 +140,13 @@ const AuctionDetailPage: React.FC = () => {
     }
   };
 
+  // Breadcrumb items
+  const breadcrumbItems = auction ? [
+    { label: 'Browse', href: '/' },
+    { label: auction.category, href: `/?category=${encodeURIComponent(auction.category)}` },
+    { label: auction.title, isActive: true }
+  ] : [];
+
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
@@ -168,10 +176,13 @@ const AuctionDetailPage: React.FC = () => {
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Back Button */}
-        <Link to="/" className="inline-flex items-center text-secondary-600 hover:text-primary-600 mb-6">
+        <Link to="/" className="inline-flex items-center text-secondary-600 hover:text-primary-600 mb-4">
           <ArrowLeft className="w-4 h-4 mr-2" />
           Back to Auctions
         </Link>
+
+        {/* Breadcrumb */}
+        <Breadcrumb items={breadcrumbItems} className="mb-6" />
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Left Column - Images and Details */}
