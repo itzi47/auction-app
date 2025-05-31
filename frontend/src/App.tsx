@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Search, User, Bell, Menu } from 'lucide-react';
 import HomePage from './pages/HomePage';
 import AuctionDetailPage from './pages/AuctionDetailPage';
+import CreateAuctionPage from './pages/CreateAuctionPage';
+import WatchlistPage from './pages/WatchlistPage';
 import Button from './components/ui/Button';
 import Logo from './components/ui/Logo';
 
@@ -72,6 +74,8 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/auctions/:id" element={<AuctionDetailPage />} />
+            <Route path="/sell" element={<CreateAuctionPage />} />
+            <Route path="/watchlist" element={<WatchlistPage />} />
           </Routes>
         </main>
 

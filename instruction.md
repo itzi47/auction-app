@@ -70,8 +70,8 @@
   - Include links to About, Contact, Terms, Privacy, Social media icons.  
   - Ensure consistent styling across all pages.  
 
-- [ ] **Establish a Global Breadcrumb Component**  
-  - For pages like Auction Detail and Profile, display clickable breadcrumbs (e.g., Home > Category > Auction).  
+- [x] **Establish a Global Breadcrumb Component**  
+  - For pages like Auction Detail and Profile, display clickable breadcrumbs (e.g., Home > Category > Auction).
 
 ### 2.4 Visual Components & Animation
 
