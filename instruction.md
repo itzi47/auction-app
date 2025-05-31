@@ -35,7 +35,7 @@
   - Define border radii, shadow sizes, and iconography style.  
   - Outline button styles (primary, secondary, disabled) and form input styles (focus, error, disabled).  
 
-- [ ] **Design Logo & Branding Assets**  
+- [x] **Design Logo & Branding Assets**  
   - Provide a high-resolution logo (light and dark versions).  
   - Create iconography for key actions (bid, comment, wishlist, notifications).  
   - Produce brand banner imagery for homepage header.  
@@ -96,27 +96,27 @@
 
 ### 3.1 Sell / Create Auction Workflow
 
-- [ ] **Audit Existing "Sell" Flow**  
+- [x] **Audit Existing "Sell" Flow**  
   - Verify presence of form steps: Upload Images, Item Details, Auction Terms, Shipping & Payment, Preview.  
   - Identify any missing form validations or incomplete UI elements.  
 
-- [ ] **Define Tasks to Finalize "Create Auction"**  
+- [x] **Define Tasks to Finalize "Create Auction"**  
   - Ensure image upload UI supports preview and reordering.  
   - Ensure form fields have consistent validation styles (error messages, inline prompts).  
   - Confirm "Publish" button is styled and disabled until mandatory fields are valid.  
   - Add final Preview screen with live styling matching auction detail page.
 
-- [ ] **Implement Auction Status Updates**  
+- [x] **Implement Auction Status Updates**  
   - Add visual cues for "Draft," "Scheduled," "Active," "Ended."  
   - Ensure the Sell flow navigates to a confirmation page after successful submission.
 
 ### 3.2 Wishlist / Watchlist Functionality
 
-- [ ] **Audit "Watchlist" UI**  
+- [x] **Audit "Watchlist" UI**  
   - Confirm presence of "Watchlist" page or modal.  
   - Identify missing UI elements (e.g., empty state, remove-from-watchlist icon).
 
-- [ ] **Define Tasks to Complete Watchlist Feature**  
+- [x] **Define Tasks to Complete Watchlist Feature**  
   - Add a "Watch" or "Unwatch" button/icon on each auction card.  
   - On click, visually update button state (e.g., filled/unfilled heart icon).  
   - Build a dedicated Watchlist page: grid of watched auctions with ability to remove or clear watchlist.  
@@ -124,11 +124,11 @@
 
 ### 3.3 Comments & Q&A Section
 
-- [ ] **Audit Comments Section on Auction Detail**  
+- [x] **Audit Comments Section on Auction Detail**  
   - Verify existing UI for comment list, comment form, and pagination or "Load More."  
   - Identify styling gaps: avatar beside commenter, timestamp display, nested replies (if any).
 
-- [ ] **Define Tasks to Finalize Comments**  
+- [x] **Define Tasks to Finalize Comments**  
   - Style each comment: commenter avatar, username, timestamp, content container.  
   - Ensure form fields are labeled, have proper placeholder text, and show errors.  
   - Add pagination or infinite scroll if comment count exceeds a threshold.  
@@ -136,11 +136,11 @@
 
 ### 3.4 Bidding & Real-Time Updates
 
-- [ ] **Audit Bidding Panel UI**  
+- [x] **Audit Bidding Panel UI**  
   - Confirm presence of current bid, minimum bid amount, and bid input.  
   - Identify missing accessibility features (e.g., focus states, ARIA labels).
 
-- [ ] **Define Tasks to Polish Bidding Experience**  
+- [x] **Define Tasks to Polish Bidding Experience**  
   - Style the bid input and "Place Bid" button to match design system.  
   - Add inline validation for bid amounts (e.g., display "Bid must be ≥ $X").  
   - Create a real-time "bid received" visual indicator (flash animation or highlight).  
@@ -162,11 +162,11 @@
 
 ### 3.6 Search & Filtering
 
-- [ ] **Audit Search Bar & Filters**  
+- [x] **Audit Search Bar & Filters**  
   - Confirm presence of search input, category dropdown, and filter button.  
   - Identify any missing filter options (e.g., price range, time remaining).
 
-- [ ] **Define Tasks to Complete Search UI**  
+- [x] **Define Tasks to Complete Search UI**  
   - Style the search input with placeholder text and a search icon.  
   - Add clear button ("×") inside the search field to reset input.  
   - Style category dropdown to match design system (rounded corners, hover states).  
@@ -254,30 +254,30 @@
 
 ### 5.1 Homepage / Discover Flow
 
-- [ ] **Audit Top Section ("Hero")**  
+- [x] **Audit Top Section ("Hero")**  
   - Ensure the banner headline and subtext are impactful and legible.  
   - Confirm that key metrics (Active Users, Live Auctions, Total Bids, Total Value) are updated and visually prioritized.  
   - Identify any misaligned elements or overlapping text on different screen sizes.
 
-- [ ] **Search & Filter Flow**  
+- [x] **Search & Filter Flow**  
   - Document expected behaviors (search suggestions, filter interactions).  
   - Identify missing UX hints, such as placeholder text, input icons, tooltip for filter options.  
 
-- [ ] **Auction Grid Behavior**  
+- [x] **Auction Grid Behavior**  
   - Audit hover states, clickable card areas (e.g., entire card navigates to detail).  
   - Confirm that images, titles, bid amounts, and countdowns are visible and hierarchized visually.  
 
 ### 5.2 Auction Detail Flow
 
-- [ ] **Audit Bidding Interaction**  
+- [x] **Audit Bidding Interaction**  
   - List any missing confirmation steps (e.g., "Are you sure you want to place this bid?").  
   - Identify places to add contextual help or tooltips (e.g., what happens when your bid wins).  
 
-- [ ] **Audit Image Carousel Experience**  
+- [x] **Audit Image Carousel Experience**  
   - Verify that touch/swipe gestures (or arrows) allow users to navigate images.  
   - Identify opportunity to add zoom-on-hover or fullscreen image view.
 
-- [ ] **Audit Related Items / Recommendations**  
+- [x] **Audit Related Items / Recommendations**  
   - If present, ensure recommendations are visually consistent with auction cards.  
   - If missing, document it as a potential future enhancement (e.g., "Customers also liked…").
 
@@ -293,11 +293,11 @@
 
 ### 5.4 Sell Flow & Confirmation
 
-- [ ] **Audit "Create Auction" Flow End-to-End**  
+- [x] **Audit "Create Auction" Flow End-to-End**  
   - List any missing steps or unclear labels that could confuse a first-time seller.  
   - Identify missing confirmation screens or success states after auction creation.
 
-- [ ] **Audit Seller Dashboard**  
+- [x] **Audit Seller Dashboard**  
   - Confirm that sellers can see their active, scheduled, and completed auctions.  
   - Identify missing UI for editing or canceling a listing.
 
@@ -309,11 +309,11 @@
 
 ### 6.1 Checklist Integration & Tracking
 
-- [ ] **Integrate This Checklist into Project Documentation**  
+- [x] **Integrate This Checklist into Project Documentation**  
   - Add a direct link to this `UI_UX_Checklist.md` in the repository README.  
   - Encourage each task to be checked off in pull requests and commits.  
 
-- [ ] **Create a High-Level Roadmap**  
+- [x] **Create a High-Level Roadmap**  
   - Summarize major milestones:  
     1. Version Control Setup  
     2. Global Design System & Branding  
@@ -323,7 +323,7 @@
     6. Visual Polish & Accessibility  
     7. User Journey Refinements  
 
-- [ ] **Define Review & Approval Process**  
+- [x] **Define Review & Approval Process**  
   - For each completed feature or UI enhancement, include a screenshot or video demo.  
   - Establish criteria for "UI Complete" (e.g., passes responsive QA, accessibility checks, visual consistency).  
 

@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage';
 import AuctionDetailPage from './pages/AuctionDetailPage';
 import CreateAuctionPage from './pages/CreateAuctionPage';
 import WatchlistPage from './pages/WatchlistPage';
+import ProfilePage from './pages/ProfilePage';
 import Button from './components/ui/Button';
 import Logo from './components/ui/Logo';
 
@@ -76,6 +77,7 @@ function App() {
             <Route path="/auctions/:id" element={<AuctionDetailPage />} />
             <Route path="/sell" element={<CreateAuctionPage />} />
             <Route path="/watchlist" element={<WatchlistPage />} />
+            <Route path="/profile/:username" element={<ProfilePage />} />
           </Routes>
         </main>
 
