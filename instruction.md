@@ -175,21 +175,21 @@
 
 ### 3.7 Notifications & Messaging
 
-- [ ] **Audit Notifications Dropdown & Page**  
+- [x] **Audit Notifications Dropdown & Page**  
   - Verify presence of bell icon in header, and a dropdown or dedicated page for notifications.  
   - Identify missing visual cues for unread vs. read notifications.
 
-- [ ] **Define Tasks to Finalize Notifications**  
+- [x] **Define Tasks to Finalize Notifications**  
   - Style notification items: icon, title, brief description, timestamp.  
   - Ensure the unread count badge appears over the bell icon.  
   - Create a "Mark All as Read" button, styled per design system.  
   - Add an empty-state UI for no notifications (e.g., "You have no new notifications!").
 
-- [ ] **Audit Messages / Chat UI**  
+- [x] **Audit Messages / Chat UI**  
   - Confirm presence of Messages page or modal with thread list.  
   - Identify missing UI elements: unread badge, input box styling, message bubbles.
 
-- [ ] **Define Tasks to Complete Messaging**  
+- [x] **Define Tasks to Complete Messaging**  
   - Style message thread list with user avatar, username, and snippet of last message.  
   - For the chat view, style incoming vs. outgoing message bubbles, add timestamp, handle long text.  
   - Ensure the send button is visible and disabled when input is empty.  
@@ -203,45 +203,45 @@
 
 ### 4.1 Color & Contrast Review
 
-- [ ] **Audit All Text/Background Combinations**  
+- [x] **Audit All Text/Background Combinations**  
   - Identify any low-contrast areas (e.g., light gray text on white background).  
   - Create a list of problematic elements and specify updated color pairings.
 
-- [ ] **Define Accessible Color Roles**  
+- [x] **Define Accessible Color Roles**  
   - Primary buttons/text, Secondary buttons/text, Disabled states, Error states, Informational states.  
   - Document updated hex values in the style guide.
 
 ### 4.2 Typography & Spacing Consistency
 
-- [ ] **Audit All Heading & Paragraph Sizes**  
+- [x] **Audit All Heading & Paragraph Sizes**  
   - Ensure H1, H2, H3, H4, body text, captions have consistent font sizes and line-heights.  
   - List any mismatches (e.g., H2 on Auction Detail is the same size as H3 on Profile).
 
-- [ ] **Create a Spacing Map**  
+- [x] **Create a Spacing Map**  
   - Document standardized spacing: `4px`, `8px`, `16px`, `24px`, `32px` for margins/padding.  
   - Identify areas where custom spacing deviates from this scale.
 
 ### 4.3 Iconography & Imagery
 
-- [ ] **Inventory All Icons Used Across the App**  
+- [x] **Inventory All Icons Used Across the App**  
   - List all icons (search, notifications, user, bid, wishlist, comment).  
   - Identify any missing icons or inconsistent styles (e.g., outlined vs. filled).  
 
-- [ ] **Define Icon Style & Library**  
+- [x] **Define Icon Style & Library**  
   - Decide on a single icon set (e.g., Heroicons, FontAwesome) and ensure consistency.  
   - Replace any mismatched/custom PNG icons with SVG from the chosen library.
 
-- [ ] **Image Placeholders & Loading States**  
+- [x] **Image Placeholders & Loading States**  
   - Create a consistent placeholder style for auction images (e.g., blurred gradient or neutral gray).  
   - Add a loading spinner or skeleton placeholder when image assets are loading.
 
 ### 4.4 Accessibility Improvements
 
-- [ ] **Keyboard Navigation Audit**  
+- [x] **Keyboard Navigation Audit**  
   - Identify all interactive elements (buttons, links, form fields) and ensure they are focusable (`tabindex`).  
   - List any missing ARIA labels or roles for screen-reader compatibility.  
 
-- [ ] **Contrast & Screen Reader Testing**  
+- [x] **Contrast & Screen Reader Testing**  
   - Document elements failing WCAG AA contrast ratio.  
   - List tasks to add `aria-label`, `aria-describedby`, and `role` attributes where needed.  
   - Identify complex UI patterns (e.g., modals, custom dropdowns) and ensure proper focus management.
@@ -283,11 +283,11 @@
 
 ### 5.3 Profile & Social Engagement Flow
 
-- [ ] **Audit Follow / Unfollow Interaction**  
+- [x] **Audit Follow / Unfollow Interaction**  
   - Verify the follow button changes state and provides feedback (e.g., "Following" vs. "Follow").  
   - Identify missing confirmation or notification to the profile owner when someone follows.
 
-- [ ] **Audit Review & Feedback Flow**  
+- [x] **Audit Review & Feedback Flow**  
   - Confirm that users can leave a rating and review after winning an auction.  
   - Identify UI gaps: star rating input, review text area, "Submit" button disabled state if empty.
 

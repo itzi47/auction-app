@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Search, User, Bell, Menu } from 'lucide-react';
 import HomePage from './pages/HomePage';
@@ -6,10 +6,17 @@ import AuctionDetailPage from './pages/AuctionDetailPage';
 import CreateAuctionPage from './pages/CreateAuctionPage';
 import WatchlistPage from './pages/WatchlistPage';
 import ProfilePage from './pages/ProfilePage';
+import NotificationsPage from './pages/NotificationsPage';
+import MessagesPage from './pages/MessagesPage';
+import AuctionCreatedSuccessPage from './pages/AuctionCreatedSuccessPage';
 import Button from './components/ui/Button';
 import Logo from './components/ui/Logo';
 
 function App() {
+  // Mock notification counts - in a real app this would come from an API
+  const [unreadNotifications, setUnreadNotifications] = useState(3);
+  const [unreadMessages, setUnreadMessages] = useState(2);
+
   return (
     <Router>
       <div className="min-h-screen bg-gray-50">
@@ -48,12 +55,30 @@ function App() {
                 
                 {/* User Actions */}
                 <div className="flex items-center space-x-2 ml-4 pl-4 border-l border-secondary-200">
-                  <Button variant="ghost" size="sm">
-                    <Bell className="w-5 h-5" />
-                  </Button>
-                  <Button variant="ghost" size="sm">
-                    <User className="w-5 h-5" />
-                  </Button>
+                  {/* Notifications */}
+                  <Link to="/notifications">
+                    <Button variant="ghost" size="sm" className="relative">
+                      <Bell className="w-5 h-5" />
+                      {unreadNotifications > 0 && (
+                        <span className="absolute -top-1 -right-1 bg-accent-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium">
+                          {unreadNotifications > 9 ? '9+' : unreadNotifications}
+                        </span>
+                      )}
+                    </Button>
+                  </Link>
+
+                  {/* Messages */}
+                  <Link to="/messages">
+                    <Button variant="ghost" size="sm" className="relative">
+                      <User className="w-5 h-5" />
+                      {unreadMessages > 0 && (
+                        <span className="absolute -top-1 -right-1 bg-primary-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium">
+                          {unreadMessages > 9 ? '9+' : unreadMessages}
+                        </span>
+                      )}
+                    </Button>
+                  </Link>
+                  
                   <Button variant="primary" size="sm">
                     Sign In
                   </Button>
@@ -78,6 +103,9 @@ function App() {
             <Route path="/sell" element={<CreateAuctionPage />} />
             <Route path="/watchlist" element={<WatchlistPage />} />
             <Route path="/profile/:username" element={<ProfilePage />} />
+            <Route path="/notifications" element={<NotificationsPage />} />
+            <Route path="/messages" element={<MessagesPage />} />
+            <Route path="/auction-created-success" element={<AuctionCreatedSuccessPage />} />
           </Routes>
         </main>
 
