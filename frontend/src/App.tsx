@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Search, User, Bell, Menu } from 'lucide-react';
-import HomePage from './pages/HomePage';
+import RevolutionaryHomePage from './pages/RevolutionaryHomePage';
 import AuctionDetailPage from './pages/AuctionDetailPage';
 import CreateAuctionPage from './pages/CreateAuctionPage';
 import WatchlistPage from './pages/WatchlistPage';
@@ -11,6 +11,7 @@ import MessagesPage from './pages/MessagesPage';
 import AuctionCreatedSuccessPage from './pages/AuctionCreatedSuccessPage';
 import Button from './components/ui/Button';
 import Logo from './components/ui/Logo';
+import './styles/revolution.css';
 
 function App() {
   // Mock notification counts - in a real app this would come from an API
@@ -20,8 +21,8 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gray-50">
-        {/* Navigation */}
-        <nav className="bg-white shadow-soft border-b border-secondary-200">
+        {/* Revolutionary Navigation */}
+        <nav className="nav-revolutionary">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
               {/* Logo */}
@@ -36,7 +37,7 @@ function App() {
                   <input
                     type="text"
                     placeholder="Search auctions..."
-                    className="w-full pl-10 pr-4 py-2 border border-secondary-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    className="input-revolutionary w-full pl-10 pr-4 py-2"
                   />
                 </div>
               </div>
@@ -60,7 +61,7 @@ function App() {
                     <Button variant="ghost" size="sm" className="relative">
                       <Bell className="w-5 h-5" />
                       {unreadNotifications > 0 && (
-                        <span className="absolute -top-1 -right-1 bg-accent-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium">
+                        <span className="absolute -top-1 -right-1 bg-accent-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium pulse-glow">
                           {unreadNotifications > 9 ? '9+' : unreadNotifications}
                         </span>
                       )}
@@ -72,16 +73,16 @@ function App() {
                     <Button variant="ghost" size="sm" className="relative">
                       <User className="w-5 h-5" />
                       {unreadMessages > 0 && (
-                        <span className="absolute -top-1 -right-1 bg-primary-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium">
+                        <span className="absolute -top-1 -right-1 bg-primary-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium pulse-glow">
                           {unreadMessages > 9 ? '9+' : unreadMessages}
                         </span>
                       )}
                     </Button>
                   </Link>
                   
-                  <Button variant="primary" size="sm">
+                  <button className="btn-revolutionary">
                     Sign In
-                  </Button>
+                  </button>
                 </div>
               </div>
 
@@ -98,7 +99,7 @@ function App() {
         {/* Main Content */}
         <main>
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<RevolutionaryHomePage />} />
             <Route path="/auctions/:id" element={<AuctionDetailPage />} />
             <Route path="/sell" element={<CreateAuctionPage />} />
             <Route path="/watchlist" element={<WatchlistPage />} />
@@ -109,9 +110,14 @@ function App() {
           </Routes>
         </main>
 
-        {/* Footer */}
-        <footer className="bg-secondary-900 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Revolutionary Footer */}
+        <footer className="bg-secondary-900 text-white relative overflow-hidden">
+          {/* Particle Background for Footer */}
+          <div className="absolute inset-0 opacity-20">
+            <div className="particles-bg"></div>
+          </div>
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="col-span-1 md:col-span-2">
                 <Logo variant="dark" size="lg" className="mb-4" />
@@ -120,38 +126,38 @@ function App() {
                   place bids, and connect with a community of passionate buyers and sellers.
                 </p>
                 <div className="flex space-x-4">
-                  <Button variant="ghost" size="sm" className="text-secondary-300 hover:text-white">
+                  <button className="btn-revolutionary">
                     Privacy Policy
-                  </Button>
-                  <Button variant="ghost" size="sm" className="text-secondary-300 hover:text-white">
+                  </button>
+                  <button className="btn-revolutionary">
                     Terms of Service
-                  </Button>
+                  </button>
                 </div>
               </div>
               
               <div>
-                <h3 className="text-lg font-semibold mb-4">Categories</h3>
+                <h3 className="text-lg font-semibold mb-4 text-gradient">Categories</h3>
                 <ul className="space-y-2 text-secondary-300">
-                  <li><button className="hover:text-white transition-colors text-left">Electronics</button></li>
-                  <li><button className="hover:text-white transition-colors text-left">Art & Collectibles</button></li>
-                  <li><button className="hover:text-white transition-colors text-left">Watches & Jewelry</button></li>
-                  <li><button className="hover:text-white transition-colors text-left">Musical Instruments</button></li>
+                  <li><button className="hover:text-white transition-colors text-left hover-lift">Electronics</button></li>
+                  <li><button className="hover:text-white transition-colors text-left hover-lift">Art & Collectibles</button></li>
+                  <li><button className="hover:text-white transition-colors text-left hover-lift">Watches & Jewelry</button></li>
+                  <li><button className="hover:text-white transition-colors text-left hover-lift">Musical Instruments</button></li>
                 </ul>
               </div>
               
               <div>
-                <h3 className="text-lg font-semibold mb-4">Support</h3>
+                <h3 className="text-lg font-semibold mb-4 text-gradient">Support</h3>
                 <ul className="space-y-2 text-secondary-300">
-                  <li><button className="hover:text-white transition-colors text-left">Help Center</button></li>
-                  <li><button className="hover:text-white transition-colors text-left">Contact Us</button></li>
-                  <li><button className="hover:text-white transition-colors text-left">Seller Guide</button></li>
-                  <li><button className="hover:text-white transition-colors text-left">Buyer Protection</button></li>
+                  <li><button className="hover:text-white transition-colors text-left hover-lift">Help Center</button></li>
+                  <li><button className="hover:text-white transition-colors text-left hover-lift">Contact Us</button></li>
+                  <li><button className="hover:text-white transition-colors text-left hover-lift">Seller Guide</button></li>
+                  <li><button className="hover:text-white transition-colors text-left hover-lift">Buyer Protection</button></li>
                 </ul>
               </div>
             </div>
             
             <div className="border-t border-secondary-700 mt-8 pt-8 text-center text-secondary-400">
-              <p>&copy; 2024 AuctionHub. All rights reserved.</p>
+              <p>&copy; 2024 AuctionHub. All rights reserved. <span className="text-gradient">Revolutionary Experience</span></p>
             </div>
           </div>
         </footer>
